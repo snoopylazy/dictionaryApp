@@ -2,7 +2,6 @@ import 'package:dictionaryapp/pages/loginPage.dart';
 import 'package:dictionaryapp/pages/favoritePage.dart';
 import 'package:dictionaryapp/pages/homePage.dart';
 import 'package:dictionaryapp/pages/subscriptionPage.dart';
-import 'package:dictionaryapp/pages/apiTestPage.dart';
 import 'package:dictionaryapp/services/auth_service.dart';
 import 'package:flutter/material.dart';
 
@@ -38,9 +37,9 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      key: _appKey, // Add this key
+      key: _appKey,
       debugShowCheckedModeBanner: false,
-      title: 'វេចនានុក្រម',
+      title: 'Dictionary App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue.shade700),
         fontFamily: 'Noto',
@@ -65,7 +64,6 @@ class _MyAppState extends State<MyApp> {
       routes: {
         '/login': (context) => const LoginPage(),
         '/home': (context) => _buildMainApp(),
-        '/api-test': (context) => const ApiTestPage(),
       },
     );
   }
